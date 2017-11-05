@@ -16,12 +16,14 @@ public class ItemTest {
         obj2 = new Integer(2017);
     }
     /*
+
     public void testGetSet(){
-        item = new Item(obj1);
-        assertThat(item.getValue(),sameInstance(obj1));
-        item.setValue(obj2);
-        assertThat(item.getValue(),sameInstance(obj2));
-    }*/
+    item = new Item(obj1);
+    assertThat(item.getValue(),sameInstance(obj1));
+    item.setValue(obj2);
+    assertThat(item.getValue(),sameInstance(obj2));
+    }
+    */
 
     @Test
     public void getValue() throws Exception {
