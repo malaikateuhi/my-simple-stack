@@ -14,6 +14,7 @@ public class SimpleStackImplTest {
     SimpleStack simpleStack;
     Item item1 = new Item(new String("item1"));
     Item item2 = new Item(new String("item2"));
+    Item item3 = new Item(new Integer(8));
 
     @Before
     public void setUp() throws Exception {
@@ -39,20 +40,42 @@ public class SimpleStackImplTest {
 
     @Test
     public void push() throws Exception {
+        Assert.assertEquals(0,simpleStack.getSize());
+        simpleStack.push(item3);
+        Assert.assertEquals(1,simpleStack.getSize());
+        Item o = simpleStack.peek();
+        Assert.assertTrue(o.getValue() instanceof Integer);
+        Integer integer = (Integer) o.getValue();
+        Assert.assertEquals(8,integer.intValue());
+        Assert.assertEquals(item3.getValue(),integer);
 
     }
 
     @Test
     public void peek() throws Exception {
-        simpleStack.push(item1);
-        simpleStack.push(item2);
-        final Item item = simpleStack.peek();
-        assertThat(item, sameInstance(item2));
+        Assert.assertEquals(0,simpleStack.getSize());
+        simpleStack.push(item3);
+        Assert.assertEquals(1,simpleStack.getSize());
+        Item o = simpleStack.peek();
+        Assert.assertEquals(1,simpleStack.getSize());
+        Assert.assertTrue(o.getValue() instanceof Integer);
+        Integer integer = (Integer) o.getValue();
+        Assert.assertEquals(8,integer.intValue());
+        Assert.assertEquals(item3.getValue(),integer);
 
     }
 
     @Test
     public void pop() throws Exception {
+        Assert.assertEquals(0,simpleStack.getSize());
+        simpleStack.push(item3);
+        Assert.assertEquals(1,simpleStack.getSize());
+        Item o = simpleStack.pop();
+        Assert.assertEquals(0,simpleStack.getSize());
+        Assert.assertTrue(o.getValue() instanceof Integer);
+        Integer integer = (Integer) o.getValue();
+        Assert.assertEquals(8,integer.intValue());
+        Assert.assertEquals(item3.getValue(),integer);
     }
 
 }
