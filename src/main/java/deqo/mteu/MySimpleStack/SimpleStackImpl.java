@@ -4,7 +4,7 @@ import java.util.EmptyStackException;
 import java.util.Stack;
 
 /*
-* Reponse Exigence #1
+* Reponse Exigence #3
 * */
 
 public class SimpleStackImpl implements SimpleStack{
