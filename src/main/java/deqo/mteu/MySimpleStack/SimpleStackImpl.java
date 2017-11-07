@@ -3,6 +3,10 @@ package deqo.mteu.MySimpleStack;
 import java.util.EmptyStackException;
 import java.util.Stack;
 
+/*
+* Exigence #1
+* */
+
 public class SimpleStackImpl implements SimpleStack{
 
     Stack<Object> wrappedStack = new Stack<Object>();
