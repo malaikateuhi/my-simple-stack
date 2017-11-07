@@ -1,5 +1,9 @@
 package deqo.mteu.MySimpleStack;
 
+/*
+  Reponse exigence #1
+ */
+
 public class Item {
 
     private Object value;
